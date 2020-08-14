@@ -9,59 +9,47 @@ koubectl get all
 ## List Services
 
 ```
-kubectl get srevice
+kubectl get service
 kubectl get svc
 ```
 
 ## Expose Deployment	
 
 ```
-kubectl expose deployment k8s-ws --type=NodePort --name=my-ws-svc --port 80 --target-port 5000
+kubectl expose deployment k8s-ws --name=mysvc --port 80 --target-port 5000
 ```
 
 ## List Services
 
 ```
+kubectl get svc
 ```
 
-## List All -o wide
+## Create a "tester" pod and access the service
 
 ```
+kubectl run tester --image=nodyd/k8s-ws
+kubectl exec -it tester -- sh
+ping -c1 mysvc
+curl mysvc
+curl mysvc:80
 ```
 
-## Exec into Pod
+## inspect the IP addresses of the pod and the service
 
 ```
-```
-
-## Ping Service
-
-```
-```
-
-## curl Service
-
-```
-```
-
-## List Services
-
-```
+kubectl get all -o wide
 ```
 
 ## Change ServiceType ClusterIP-NodePort
 
 ```
-kubectl expose deployment k8s-ws --type=NodePort --name=my-ws-svc
+kubectl patch svc mysvc --type='json' -p '[{"op":"replace","path":"/spec/type","value":"NodePort"}]'
 ```
 
-## List Services
+## List Services and access the NodePort on the Host
 
 ```
+kubectl get svc
+curl 127.0.0.1:<NodePort>
 ```
-
-## curl Host
-
-```
-```
-
