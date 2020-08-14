@@ -1,2 +1,2 @@
-# k8s-exercises
+# Kubernetes Workshop
 A collection of Kubernetes exercises
