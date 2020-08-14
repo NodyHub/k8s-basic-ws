@@ -19,15 +19,30 @@ kubectl get deployment mysvc -o yaml
 kubectl delete svc mysvc
 kubectl delete deployment k8s-ws
 kubectl delete pod tester
+kubectl get all
 ```
 
 ## Inspect the `*.yaml` files
 
 ```
-ls -l *.yaml
-cat k8s-ws.deployment.yaml
-cat tester.pod.yaml
-cat mysvc.svc.yaml
-cat secret
+ls -l yaml/
+cat yaml/k8s-ws.deployment.yaml
+cat yaml/tester.pod.yaml
+cat yaml/mysvc.svc.yaml
+cat yaml/logfiles.secrets.yaml
 ```
 
+## Create the resources with the yaml files
+
+```
+kubectl create -f yaml/k8s-ws.deployment.yaml
+kubectl create -f yaml/tester.pod.yaml
+kubectl create -f yaml/mysvc.svc.yaml
+kubectl create -f yaml/logfiles.secrets.yaml
+```
+
+## See that everything is back
+
+```
+kubectl get all
+```
