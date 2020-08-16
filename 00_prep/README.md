@@ -8,6 +8,8 @@ You need at least access to a Kubernetes Cluster. It is benefitial, if you are `
 
 To spin up a mini cluster, you can use [Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/) for the sake of ease.
 
+A prepared Vagrant file can be found in directory [minikube/](minikube/).
+
 ## Docker image
 
 I prepared a Dockerimage that start a Nginx webserver and displays content from a file, which is specified in an environment variable.
