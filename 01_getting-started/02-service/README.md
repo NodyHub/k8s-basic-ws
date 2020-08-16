@@ -1,4 +1,6 @@
-# Create Service
+# Create a Service
+
+All necessary information about Services can be found in the official documentation: [Services | Kubernetes](https://kubernetes.io/docs/concepts/services-networking/service/). 
 
 ## List All
 
