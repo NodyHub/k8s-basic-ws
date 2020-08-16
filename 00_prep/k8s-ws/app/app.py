@@ -9,7 +9,7 @@ def hello_world():
     DB_CON_STRING = os.getenv('DB_CON_STRING')
 
     # Create directory listing
-    DATA_DIR = os.getenv('DATA_DIR')
-    dir_listing = "\n".join([ "%s/%s" % (DATA_DIR, x) for x in os.listdir(DATA_DIR)])
+    LIST_DIR = os.getenv('LIST_DIR')
+    dir_listing = "\n".join([ "%s/%s" % (LIST_DIR, x) for x in os.listdir(LIST_DIR)])
     
-    return 'DB connection string: %s\nDirectory listing for "%s":\n%s' % (DB_CON_STRING, DATA_DIR, dir_listing)
+    return 'DB connection string: %s\nDirectory listing for "%s":\n%s' % (DB_CON_STRING, LIST_DIR, dir_listing)
