@@ -1,4 +1,4 @@
-# Ingress
+# Defining Ingress Rules
 
 All necessary information about the usage of Ingress can be found in the official documentation: [Ingress | Kubernetes](https://kubernetes.io/docs/concepts/services-networking/ingress/), there are multiple ways to define Ingress. 
 
