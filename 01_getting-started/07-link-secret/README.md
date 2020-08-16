@@ -1,4 +1,4 @@
-# Link Secret in ENV 
+# Inject Secrets into ENV 
 
 All necessary information about the usage of Secrets can be found in the official documentation: [Distribute Credentials Securely Using Secrets](https://kubernetes.io/docs/tasks/inject-data-application/distribute-credentials-secure/), there are multiple ways to interact with Secrets. 
 
