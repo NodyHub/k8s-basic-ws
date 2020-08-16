@@ -1,5 +1,8 @@
 # Environment 
 
+All necessary information about Kubernetes Objects can be found in the official documentation: [Define Environment Variables for a Container](https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/). 
+
+
 ## Inspect the new deployment
 
 ```
