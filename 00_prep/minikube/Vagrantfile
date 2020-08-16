@@ -28,15 +28,15 @@ Vagrant.configure("2") do |config|
 	
   # prepare user
   config.vm.provision "file", 
-    source: "pubkey", 
-	destination: "/home/vagrant/.ssh/publickey"
+    source: "ssh-key.pub", 
+	destination: "/home/vagrant/.ssh/ssh-key.pub"
   config.vm.provision "file", 
     source: "start-minikube.sh", 
 	destination: "/home/vagrant/.ssh/start-minikube.sh"	
   config.vm.provision "shell", 
     privileged: false,
     inline: <<-SHELL
-	  cat /home/vagrant/.ssh/publickey >> /home/vagrant/.ssh/authorized_keys
+	  cat /home/vagrant/.ssh/ssh-key.pub >> /home/vagrant/.ssh/authorized_keys
 	  chmod +x /home/vagrant/start-minikube.sh
 	  echo 'source <(kubectl completion bash)' >>~/.bashrc
     SHELL	
@@ -63,4 +63,5 @@ Vagrant.configure("2") do |config|
     SHELL  
 
 end
+
 
