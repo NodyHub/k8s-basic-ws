@@ -1,5 +1,8 @@
 # Secrets & ConfigMaps
 
+All necessary information about Secrets and ConfigMaps can be found in the official documentation: [Secrets | Kubernetes](https://kubernetes.io/docs/concepts/configuration/secret/), [ConfigMaps | Kubernetes](https://kubernetes.io/docs/concepts/configuration/configmap/). 
+
+
 ## ConfigMaps
 
 ### Create a new properties file 
