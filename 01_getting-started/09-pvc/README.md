@@ -1,4 +1,4 @@
-# Persistent Volume Claims
+# Persistent Volume & Persistent Volume Claims
 
 All necessary information about the usage of Persistent Volumes and Persistent Volume Claims can be found in the official documentation: [Persistent Volumes | Kubernetes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/). 
 
