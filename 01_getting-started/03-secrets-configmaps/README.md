@@ -34,7 +34,7 @@ kubectl describe configmap app-properties
 ### Create Secrets in the cluster
 
 ```
-kubectl create secret generic app-cfg --from-literal=con-string=mongodb://cluster-mongo
+kubectl create secret generic app-cfg --from-literal=con-string=mongodb://mongo:superSecretMongoPw@mongodb-injected-secret
 ```
 
 ### Show Secrets
