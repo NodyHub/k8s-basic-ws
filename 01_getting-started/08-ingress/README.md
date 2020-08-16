@@ -9,7 +9,7 @@ minikube addons enable ingress
 ## Create generic ingress
 
 ```
-kubectl create -f yaml yaml/k8s-ws.ingress.yaml
+kubectl create -f yaml/ingress.k8s-ws.v1.yaml
 ```
 
 ## Test ingress from host 
@@ -35,7 +35,7 @@ kubectl exec -it tester -- curl hello
 ## Apply the updated Ingress
 
 ```
-kubectl create -f yaml yaml/k8s-ws.v2.ingress.yaml
+kubectl apply -f yaml/ingress.k8s-ws.v2.yaml
 ```
 
 ## Test ingress from host
@@ -62,7 +62,7 @@ kubectl exec -it tester -- curl ghello
 ## Apply the updated Ingress
 
 ```
-kubectl create -f yaml yaml/k8s-ws.v3.ingress.yaml
+kubectl apply -f yaml/ingress.k8s-ws.v3.yaml
 ```
 
 ## Test ingress from host
