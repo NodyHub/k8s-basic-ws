@@ -49,14 +49,15 @@ kubectl exec -it pvc-pod -- ls -l /data
 ## Create a file in the volume
 
 ```
-kubectl exec -it pvc-pod -- echo "Test" > /data/hello-from-the-pod.txt
+kubectl exec -it pvc-pod -- sh
+echo "Test" > /data/hello-from-the-pod.txt
 ```
 
 ## Delete pod & Create him again
 
 ```
 kubectl delete pod pvc-pod
-kubectl create -f yaml/pvc-pod.pod.yaml
+kubectl create -f yaml/pod.pvc-pod.yaml
 ```
 
 ## See that the file is still there
