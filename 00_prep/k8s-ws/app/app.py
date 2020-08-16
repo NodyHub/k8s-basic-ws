@@ -1,6 +1,14 @@
 from flask import Flask
 import os
+import signal
+import sys
 
+# implement signal handler
+def signal_handler(sig, frame):
+    sys.exit(0)
+signal.signal(signal.SIGINT, signal_handler)
+
+# Start app
 app = Flask(__name__)
 
 @app.route('/')
@@ -12,4 +20,4 @@ def hello_world():
     LIST_DIR = os.getenv('LIST_DIR')
     dir_listing = "\n".join([ "%s/%s" % (LIST_DIR, x) for x in os.listdir(LIST_DIR)])
     
-    return 'DB connection string: %s\nDirectory listing for "%s":\n%s' % (DB_CON_STRING, LIST_DIR, dir_listing)
+    return 'DB connection string: %s\n\nDirectory listing for "%s":\n%s' % (DB_CON_STRING, LIST_DIR, dir_listing)
