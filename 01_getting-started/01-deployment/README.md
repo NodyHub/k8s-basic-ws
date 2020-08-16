@@ -1,4 +1,4 @@
-# From container to deployment
+# From Container to Deployment
 
 All necessary information about Deployments can be found in the official documentation: [Deployments | Kubernetes](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/). 
 
