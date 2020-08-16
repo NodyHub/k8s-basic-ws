@@ -1,6 +1,6 @@
 # Container to deployment
 
-All necessary information about Pods can be found in the official documentation: [Deployments | Kubernetes](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/). 
+All necessary information about Deployments can be found in the official documentation: [Deployments | Kubernetes](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/). 
 
 ## List All
 
