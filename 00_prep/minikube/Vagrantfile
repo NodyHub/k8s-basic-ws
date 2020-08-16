@@ -22,7 +22,7 @@ Vagrant.configure("2") do |config|
 	  curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 	  chmod +x minikube
 	  mkdir -p /usr/local/bin/
-      install minikube /usr/local/bin/
+	  install minikube /usr/local/bin/
 	  rm minikube
     SHELL
 	
@@ -32,7 +32,7 @@ Vagrant.configure("2") do |config|
 	destination: "/home/vagrant/.ssh/ssh-key.pub"
   config.vm.provision "file", 
     source: "start-minikube.sh", 
-	destination: "/home/vagrant/.ssh/start-minikube.sh"	
+	destination: "/home/vagrant/start-minikube.sh"	
   config.vm.provision "shell", 
     privileged: false,
     inline: <<-SHELL
