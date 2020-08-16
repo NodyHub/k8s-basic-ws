@@ -15,12 +15,18 @@ secret.code.allowed=true
 secret.code.lives=30
 EOL
 
+cat << EOL > cluster.properties                    
+k8s=great
+party=on
+EOL
+
+
 ```
 
 ### Create ConfigMap
 
 ```
-kubectl create configmap app-properties --from-file=game.properties
+kubectl create configmap app-properties --from-file=game.properties --from-file=cluster.properties
 ```
 
 ### Show ConfigMap
