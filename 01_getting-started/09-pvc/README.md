@@ -5,7 +5,7 @@
 ## Create the pod
 
 ```
-kubectl create -f yaml/pvc-pod.pod.yaml
+kubectl create -f yaml/pod.pvc-pod.yaml
 ```
 
 ## See that the pod is not started
@@ -17,7 +17,7 @@ kubectl get pod pvc-pod
 ## Create Persistent Volume Claim (necessary for pod)
 
 ```
-kubectl create -f yaml/pvc-test.pvc.yaml
+kubectl create -f yaml/pvc.pvc-test.yaml
 ```
 
 ## See that the pod is still not started and the volume is pending
@@ -30,7 +30,7 @@ kubectl get pvc pvc-test
 ## Create Persistent Volume, so that the PVC can allocate it
 
 ```
-kubectl create -f yaml/pv-test.pv.yaml
+kubectl create -f yaml/pv.pv-test.yaml
 ```
 
 ## Check The PVC that the PV is allocated

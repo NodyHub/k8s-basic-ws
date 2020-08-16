@@ -11,6 +11,6 @@ spec:
     - name: pvc-pod
       image: nodyd/k8s-ws
       volumeMounts:
-        - mountPath: "/data2"
+        - mountPath: "/data"
           name: persister
 
