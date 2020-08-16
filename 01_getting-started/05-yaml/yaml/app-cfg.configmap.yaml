@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: app-cfg
-data:
-  config.properties: |
-    secret_logfile_location=/data/bar.log
