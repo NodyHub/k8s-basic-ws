@@ -3,6 +3,9 @@ kind: ConfigMap
 metadata:
   name: app-properties
 data:
+  cluster.properties: |
+    k8s=great
+    party=on
   game.properties: |
     enemies=aliens
     lives=3
