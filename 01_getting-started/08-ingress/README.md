@@ -50,7 +50,7 @@ curl <ip of ingress>/hello
 ## Create an additional service
 ```
 kubectl create deployment google-hello --image=gcr.io/google-samples/hello-app:1.0
-kubectl expose deployment google-hello --name=ghello --port 80 --target-port 80
+kubectl expose deployment google-hello --name=ghello --port 80 --target-port 8080
 ```
 
 ## Test
