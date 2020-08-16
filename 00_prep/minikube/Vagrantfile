@@ -13,43 +13,42 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", 
     privileged: true,
     inline: <<-SHELL
-	  apt update 
-	  apt install -y docker.io conntrack curl git bash-completion zsh
-	  sudo gpasswd -a vagrant docker
-	  curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
-	  chmod +x ./kubectl
-	  mv ./kubectl /usr/local/bin/kubectl
-	  curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-	  chmod +x minikube
-	  mkdir -p /usr/local/bin/
-      install minikube /usr/local/bin/
-	  rm minikube
+        apt update 
+        apt install -y docker.io conntrack curl git bash-completion zsh
+        sudo gpasswd -a vagrant docker
+        curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
+        chmod +x ./kubectl
+        mv ./kubectl /usr/local/bin/kubectl
+        curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+        chmod +x minikube
+        mkdir -p /usr/local/bin/
+        install minikube /usr/local/bin/
+        rm minikube
     SHELL
 	
   # prepare user
   config.vm.provision "file", 
     source: "ssh-key.pub", 
-	destination: "/home/vagrant/.ssh/ssh-key.pub"
+    destination: "/home/vagrant/.ssh/ssh-key.pub"
   config.vm.provision "file", 
     source: "start-minikube.sh", 
-	destination: "/home/vagrant/.ssh/start-minikube.sh"	
+    destination: "/home/vagrant/start-minikube.sh"	
   config.vm.provision "shell", 
     privileged: false,
     inline: <<-SHELL
-	  cat /home/vagrant/.ssh/ssh-key.pub >> /home/vagrant/.ssh/authorized_keys
-	  chmod 755 /home/vagrant/start-minikube.sh
-	  echo 'source <(kubectl completion bash)' >>~/.bashrc
-    SHELL	
-  # Setup zsh
+        cat /home/vagrant/.ssh/ssh-key.pub >> /home/vagrant/.ssh/authorized_keys
+        chmod 755 /home/vagrant/start-minikube.sh
+        echo 'source <(kubectl completion bash)' >>~/.bashrc
+    SHELL
   config.vm.provision "shell", 
     privileged: false,
     inline: <<-SHELL
-	  cd git
-	  git clone https://github.com/NodyHub/dot-files.git
-	  cd dot-files
-	  ./deploy.sh
-	  sudo chsh -s /usr/bin/zsh vagrant
-	  echo 'source <(kubectl completion zsh)' >> ~/.zshrc
+        cd git
+        git clone https://github.com/NodyHub/dot-files.git
+        cd dot-files
+        ./deploy.sh
+        sudo chsh -s /usr/bin/zsh vagrant
+        echo 'source <(kubectl completion zsh)' >> ~/.zshrc
     SHELL
 
 
@@ -57,11 +56,9 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", 
     privileged: false,
     inline: <<-SHELL
-	  mkdir git
-	  cd git
-	  git clone https://github.com/NodyHub/k8s-ws.git
-    SHELL  
+        mkdir git
+        cd git
+        git clone https://github.com/NodyHub/k8s-ws.git
+    SHELL
 
 end
-
-
