@@ -60,7 +60,7 @@ Vagrant.configure("2") do |config|
 	  mkdir git
 	  cd git
 	  git clone https://github.com/NodyHub/k8s-ws.git
-    SHELL  
+    SHELL
 
 end
 
