@@ -37,7 +37,7 @@ Vagrant.configure("2") do |config|
     privileged: false,
     inline: <<-SHELL
 	  cat /home/vagrant/.ssh/ssh-key.pub >> /home/vagrant/.ssh/authorized_keys
-	  chmod +x /home/vagrant/start-minikube.sh
+	  chmod 755 /home/vagrant/start-minikube.sh
 	  echo 'source <(kubectl completion bash)' >>~/.bashrc
     SHELL	
   # Setup zsh
