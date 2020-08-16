@@ -7,6 +7,7 @@ import sys
 def signal_handler(sig, frame):
     sys.exit(0)
 signal.signal(signal.SIGINT, signal_handler)
+signal.signal(signal.SIGTERM, signal_handler)
 
 # Start app
 app = Flask(__name__)
