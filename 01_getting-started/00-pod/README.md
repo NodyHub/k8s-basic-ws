@@ -34,7 +34,7 @@ kubectl get pods
 ## Exec into pod
 
 ```
-kubectl exec -it k8s-ws -- bash
+kubectl exec -it k8s-ws -- sh
 ```
 
 ## curl localhost
