@@ -15,6 +15,10 @@ spec:
       labels:
         app: k8s-ws
     spec:
+      volumes:
+      - name: prop-vol
+        configMap:
+          name: app-properties
       containers:
       - image: nodyd/k8s-ws
         name: k8s-ws
@@ -24,7 +28,3 @@ spec:
         volumeMounts:
         - name: prop-vol
           mountPath: /properties
-      volumes:
-        - name: prop-vol
-          configMap:
-            name: app-properties
