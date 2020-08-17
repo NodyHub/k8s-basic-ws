@@ -9,6 +9,12 @@ All necessary information about the usage of Ingress can be found in the officia
 minikube addons enable ingress
 ```
 
+## Inspect the Yaml
+
+```
+cat yaml/ingress.k8s-ws.v1.yaml
+```
+
 ## Create generic ingress
 
 ```
@@ -33,6 +39,12 @@ kubectl expose deployment hello --name=hello --port 80 --target-port 80
 
 ```
 kubectl exec -it tester -- curl hello
+```
+
+## Inspect the Yaml
+
+```
+cat yaml/ingress.k8s-ws.v2.yaml
 ```
 
 ## Apply the updated Ingress
@@ -60,6 +72,12 @@ kubectl expose deployment google-hello --name=ghello --port 80 --target-port 808
 
 ```
 kubectl exec -it tester -- curl ghello
+```
+
+## Inspect the Yaml
+
+```
+cat yaml/ingress.k8s-ws.v3.yaml
 ```
 
 ## Apply the updated Ingress
