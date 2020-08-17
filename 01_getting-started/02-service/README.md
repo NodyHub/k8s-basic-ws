@@ -5,7 +5,7 @@ All necessary information about Services can be found in the official documentat
 ## List All
 
 ```
-koubectl get all
+kubectl get all
 ```
 
 ## List Services
