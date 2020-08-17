@@ -19,5 +19,5 @@ kubectl apply -f yaml/deployment.k8s-ws.yaml
 
 ```
 kubectl get pods
-kubectl exec -it tester curl mysvc
+kubectl exec -it tester -- curl mysvc
 ```
