@@ -2,6 +2,30 @@
 
 All necessary information about Kubernetes Objects can be found in the official documentation: [Understanding Kubernetes Objects](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/). 
 
+## Write a Pod specification
+
+```
+cat <<EOF > pod.my-second-pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: my-second-pod
+  name: tester
+spec:
+  containers:
+  - image: nodyd/k8s-ws
+    name: my-second-pod
+EOF
+```
+
+## Create a Pod with a self-written specification
+
+```
+kubectl create -f pod.my-second-pod.yaml
+kubectl get pods
+```
+
 
 ## List Resources
 
