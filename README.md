@@ -1,4 +1,4 @@
-# Kubernetes Workshop
+# Kubernetes Basic Workshop
 A collection of Kubernetes exercises
 
 
