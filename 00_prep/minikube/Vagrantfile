@@ -59,7 +59,7 @@ Vagrant.configure("2") do |config|
     inline: <<-SHELL
         mkdir -p ~/git
         cd ~/git
-        git clone https://github.com/NodyHub/k8s-ws.git
+        git clone https://github.com/NodyHub/k8s-basic-ws.git
     SHELL
 
 end
