@@ -6,7 +6,7 @@ All necessary information about Pods can be found in the official documentation:
 
 ```
 kubectl get all 
-``
+```
 
 ## List Namespaces 
 
