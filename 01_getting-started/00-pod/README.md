@@ -14,6 +14,12 @@ kubectl get all
 kubectl get ns
 ```
 
+## Set Namespace
+
+```
+kubectl config set-context --current --namespace=<insert-namespace-name-here>
+```
+
 ## List Pods of current namespace
 
 ```
