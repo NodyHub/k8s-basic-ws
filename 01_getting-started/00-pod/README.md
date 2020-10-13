@@ -20,6 +20,10 @@ kubectl get ns
 kubectl config set-context --current --namespace=<insert-namespace-name-here>
 ```
 
+```
+kubectl config set-context --current --namespace=$(whoami)
+```
+
 ## List Pods of current namespace
 
 ```
