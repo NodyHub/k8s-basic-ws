@@ -4,7 +4,6 @@ metadata:
   labels:
     app: k8s-ws
   name: k8s-ws
-  namespace: default
 spec:
   replicas: 1
   selector:
