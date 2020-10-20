@@ -11,7 +11,7 @@ kind: Pod
 metadata:
   labels:
     run: my-second-pod
-  name: tester
+  name: my-second-pod
 spec:
   containers:
   - image: nodyd/k8s-ws
