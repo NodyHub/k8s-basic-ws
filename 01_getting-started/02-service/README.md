@@ -51,8 +51,15 @@ kubectl patch svc mysvc --type='json' -p '[{"op":"replace","path":"/spec/type","
 
 ## List Services and access the NodePort on the Host
 
+On Minikube:
+
 ```
 kubectl get svc mysvc
 minikube service --url mysvc
 curl $(minikube service --url mysvc)
+```
+
+On jumphost:
+```
+curl $(kubectl get pod -o wide | grep "Running" | awk '{print $7}' | head -n 1):<NodePort>
 ```
