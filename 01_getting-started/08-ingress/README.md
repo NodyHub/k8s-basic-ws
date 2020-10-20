@@ -5,6 +5,7 @@ All necessary information about the usage of Ingress can be found in the officia
 
 ## Prepare Minikube
 
+In case of Minikube
 ```
 minikube addons enable ingress
 ```
