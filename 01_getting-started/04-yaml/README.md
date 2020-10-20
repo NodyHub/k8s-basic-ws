@@ -50,6 +50,7 @@ kubectl get secret app-cfg -o yaml
 kubectl delete svc mysvc
 kubectl delete deployment k8s-ws
 kubectl delete pod tester
+kubectl delete pod my-second-pod
 kubectl delete configmap app-properties
 kubectl delete secret app-cfg
 kubectl get all
