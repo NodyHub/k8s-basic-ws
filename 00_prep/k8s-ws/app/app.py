@@ -21,4 +21,4 @@ def hello_world():
     LIST_DIR = os.getenv('LIST_DIR')
     dir_listing = "\n".join([ "%s/%s" % (LIST_DIR, x) for x in os.listdir(LIST_DIR)])
     
-    return 'DB connection string: %s\n\nDirectory listing for "%s":\n%s' % (DB_CON_STRING, LIST_DIR, dir_listing)
+    return 'DB connection string: %s\n\nDirectory listing for "%s":\n%s\n' % (DB_CON_STRING, LIST_DIR, dir_listing)
