@@ -66,5 +66,6 @@ curl $(minikube service --url mysvc)
 
 On jumphost:
 ```
+kubectl get svc mysvc
 curl $(kubectl get pod -o wide | grep "Running" | awk '{print $7}' | head -n 1):<NodePort>
 ```
