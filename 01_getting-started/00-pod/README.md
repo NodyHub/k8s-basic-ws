@@ -55,6 +55,12 @@ kubectl exec -it k8s-ws -- sh
 curl 127.0.0.1:5000
 ```
 
+## Leave pod
+
+```
+exit
+```
+
 ## Delete pod
 
 ```
