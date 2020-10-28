@@ -36,6 +36,11 @@ ping -c1 mysvc
 curl mysvc
 curl mysvc:80
 ```
+## Leave the pod
+
+```
+exit
+```
 
 ## inspect the IP addresses of the pod and the service
 
