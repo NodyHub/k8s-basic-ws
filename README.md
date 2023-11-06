@@ -1,6 +1,6 @@
 # Kubernetes Basic Workshop
-A collection of Kubernetes exercises
 
+Basic Kubernets workshop with [slides](K8s-basic-ws_v1.1.pdf), [test environment](00_prep/), refernces and [exercises](01_getting-started).
 
 ## Recommended Links
 
