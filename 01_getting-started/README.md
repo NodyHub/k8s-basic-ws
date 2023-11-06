@@ -9,6 +9,6 @@ The exercises show the basic Kubernetes resource types.
 - [Resource Objects](04-yaml)
 - [Environment Variables](05-env)
 - [Integrate Configmap](06-link-configmap)
-- [ntegrate Secrets](07-link-secret)
+- [Integrate Secrets](07-link-secret)
 - [Configure Ingress](08-ingress)
 - [Persistent Volume & Persistent Volume Claims](09-pvc)
